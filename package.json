@@ -1,0 +1,13 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "My chat",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server-init": "cd server && npm install",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "client-init": "cd client && npm install"
+  }
+}
