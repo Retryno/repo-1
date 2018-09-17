@@ -1,7 +1,9 @@
 # Node TT
 
 client - npm install - npm start
+-------------------------------
 server - npm install - npm start
+-------------------------------
 
 #setup Mongodb
 Install https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
