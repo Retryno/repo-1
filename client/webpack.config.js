@@ -4,7 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const alias = {
   '@': path.resolve('./src/components'),
-  'global': path.resolve('./src/global')
+  'global': path.resolve('./src/global'),
+  'project-services': path.resolve('./src/services')
 }
 
 module.exports = env => {

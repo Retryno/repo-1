@@ -1,7 +1,7 @@
 {
-  "name": "chat-server",
+  "name": "NodeTT-server",
   "version": "1.0.0",
-  "description": "server part of the chat",
+  "description": "server part of the NodeTT",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

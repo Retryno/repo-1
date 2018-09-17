@@ -1,5 +1,4 @@
 import addAction from './addAction'
-
 export default (server, socket, db) => {
   return ({text, email}) => {
     db.collection('users').findOne({ email }, (err, result) => {

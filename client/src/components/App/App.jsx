@@ -4,14 +4,13 @@ import { Router, Route, Switch } from 'react-router'
 import history from 'global/history'
 import store from 'global/store.js'
 
-import MyActions from '@/Client/MyActions/myActions.jsx'
-import Message from '@/Client/Message/message.jsx'
-import LogIn from '@/Client/LogIn/logIn.jsx'
-import Buttons from '@/Client/Buttons/buttons.jsx'
-import Chat from '@/Admin/Chat/chat.jsx'
-import Combobox from '@/Admin/Combobox/combobox.jsx'
-import UserAction from '@/Admin/UserAction/userAction.jsx'
-import AllActions from '@/Admin/AllActions/allActions.jsx'
+import MyActions from '@/MyActions/myActions.jsx'
+import ClientChat from '@/ClientChat/clientChat.jsx'
+import LogIn from '@/LogIn/logIn.jsx'
+import Buttons from '@/Buttons/buttons.jsx'
+import Chat from '@/AdminChat/adminChat.jsx'
+import Combobox from '@/Combobox/combobox.jsx'
+import AllUserAction from '@/UserAction/userAction.jsx'
 
 export default () => {
   return (
@@ -20,12 +19,11 @@ export default () => {
         <Switch>
           <Route exact path='/' component={LogIn} />
           <Route exact path='/myactions' component={MyActions} />
-          <Route exact path='/message' component={Message} />
+          <Route exact path='/message' component={ClientChat} />
           <Route exact path='/buttons' component={Buttons} />
           <Route exact path='/adminchat' component={Chat} />
           <Route exact path='/admincombo' component={Combobox} />
-          <Route exact path='/adminuseraction' component={UserAction} />
-          <Route exact path='/adminallactions' component={AllActions} />
+          <Route exact path='/alluseraction' component={AllUserAction} />
         </Switch>
       </Router>
     </Provider>

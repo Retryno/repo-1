@@ -1,0 +1,78 @@
+#app
+  padding: 50px
+// Chat
+.chat-area
+  width: 100%
+  padding: 50px
+  height: 500px
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .user-side
+    width: 15%
+    height: 100%
+
+    .item
+      cursor: pointer
+      width: 100%
+      border: 1px solid deepskyblue
+      border-radius: 20px
+      height: 50px
+      text-align: center
+      line-height: 50px
+      margin-bottom: 10px
+      font-size: 17px
+
+    .item:hover
+      background: deepskyblue
+
+    .active
+      background: deepskyblue
+
+
+  .chat-side
+    width: 80%
+    height: 100%
+    border: 1px solid deepskyblue
+    margin-bottom: 20px
+    padding: 10px
+    border-radius: 20px
+    overflow: auto
+
+    .message
+      margin: 10px
+      text-align: left
+
+      span
+        padding: 5px
+        border-radius: 10px
+        border: 1px solid deepskyblue
+        font-size: 17px;
+        background: -webkit-linear-gradient(left, rgba(30,87,153,0.26) 0%,rgba(41,137,216,0.41) 50%,rgba(32,124,202,0.41) 51%,rgba(125,185,232,0.56) 100%);
+
+      .green-color
+        background: -webkit-linear-gradient(left, rgba(49,249,69,0.27) 0%,rgba(97,181,97,0.5) 100%);
+
+    .right
+      text-align: right;
+
+//  Menu
+.Menu
+  display: flex
+  justify-content: center
+.Menu_item
+  cursor: pointer
+  margin: 10px
+  font-size: 15px
+  font-weight: bold
+.Menu_item:hover
+  color: #87CEEB
+
+// Button
+.Button
+  display: flex
+  flex-direction: column
+  align-items: center
+.Button_pug
+  align-items: stretch

@@ -1,4 +1,3 @@
-// import { getCurrentDate } from '.././helpers'
 import moment from 'moment'
 
 export default (db, result, message, author, type, cb = () => {}) => {
