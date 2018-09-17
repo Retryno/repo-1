@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Input, Button } from 'antd'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { securityService } from 'project-services'
 import history from 'global/history.js'
 
@@ -21,12 +23,17 @@ class LogIn extends Component {
     info: ''
   }
 
+  static propTypes = {
+    socket: PropTypes.object.isRequired
+  }
+
   authentication = () => {
     this.props.form.validateFields(async (err, values) => {
       if (!err) {
         const info = await securityService.authorization({email: values.email})
         this.setState({info})
         localStorage.setItem('userAutchData', JSON.stringify(info))
+        this.props.socket.emit('last visit', info)
         history.push('/myactions')
       }
     })
@@ -76,5 +83,8 @@ class LogIn extends Component {
     )
   }
 }
+const mapStateToProps = state => ({
+  socket: state.socket
+})
 
-export default Form.create()(LogIn)
+export default connect(mapStateToProps)(Form.create()(LogIn))

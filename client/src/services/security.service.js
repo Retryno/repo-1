@@ -30,13 +30,6 @@ export const getAllMessages = body => {
   }
   return mainRequestService(url, options)
 }
-// export const isAuthenticated = () => {
-//   const url = 'http://localhost:8080/auth'
-//   const options = {
-//     method: 'GET'
-//   }
-//   return mainRequestService(url, options)
-// }
 
 export default {
   authorization,

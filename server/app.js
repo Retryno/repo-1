@@ -12,6 +12,7 @@ import messages from './events/messages'
 import getUserList from './events/getUserList'
 import getAllMessages from './events/getAllMessages'
 import adminCommand from './events/adminCommand'
+import lastVisit from './events/lastVisit'
 
 const log = logger(module)
 const app = express()
@@ -38,7 +39,8 @@ socket.connection(server => {
   server.on('messages', messages(server, socket, db))
   server.on('get user list', getUserList(server, socket, db))
   server.on('get all messages', getAllMessages(server, socket, db))
-  server.on('admin command', adminCommand(server, socket, db))
+  server.on('admin command', adminCommand(server, socket))
+  server.on('last visit', lastVisit(server, socket, db))
 
   server.on('disconnect', () => {
     log.info('User disconnect')

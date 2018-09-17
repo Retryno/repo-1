@@ -14,5 +14,10 @@ export default (db, result, message, author, type, cb = () => {}) => {
       if (err) throw err
       cb(result)
     })
+    const lastAction = {$set: {lastAction: moment().format('DD.MM.YYYY HH:MM')}}
+    db.collection('users').updateOne({ email: result.email }, lastAction, err => {
+      if (err) throw err
+      cb(result)
+    })
   }
 }
