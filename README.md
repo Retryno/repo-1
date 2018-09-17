@@ -1,8 +1,8 @@
 # Node TT
 
-client - npm install - npm start
+/client - npm install - npm start
 -------------------------------
-server - npm install - npm start
+/server - npm install - npm start
 -------------------------------
 
 #setup Mongodb
